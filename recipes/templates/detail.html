@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block content%}
+   
+    <div class="con">
+        {{object.id}} - <h2>{{object.About}}</h2>
+        <ul>
+            <h4>Ingredient</h4>
+            <li>{{object.Ingredient|linebreaks}}</li>
+        </ul>
+        <h4 style="margin-top: 40px;">Preperation Method</h4>
+        <p>{{object.Preperation|linebreaks}}</p>
+
+    </div>
+   
+
+    <style>
+        .con{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            line-height: 20px;
+        }
+    </style>
+{%endblock content%}
